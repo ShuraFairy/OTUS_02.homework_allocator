@@ -13,7 +13,7 @@ add_executable(allocator main.cpp pretty.h)
 add_library(allocator_lib lib.cpp)
 
 set_target_properties(allocator allocator_lib PROPERTIES
-        CXX_STANDARD 14
+        CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON
         )
 
@@ -30,7 +30,7 @@ if(WITH_BOOST_TEST)
     add_executable(test_version test_version.cpp)
 
     set_target_properties(test_version PROPERTIES
-        CXX_STANDARD 14
+        CXX_STANDARD 17
         CXX_STANDARD_REQUIRED ON        
     )
 

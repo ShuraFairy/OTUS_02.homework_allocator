@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <map>
 #include "custom_allocator.h"
@@ -7,7 +6,7 @@
 int main([[maybe_unused]]int argc, [[maybe_unused]] char const* argv[])
 {     
     try
-    {        
+    {   
         std::map<int, int, std::less<int>, custom_allocator<std::pair<int, size_t>, 10>> map_with_custom_allocator;
         
         auto value{ 1 };
@@ -19,7 +18,7 @@ int main([[maybe_unused]]int argc, [[maybe_unused]] char const* argv[])
 
         for (const auto & element : map_with_custom_allocator)
             std::cout << "key: " << element.first << " " << "value: " << element.second << std::endl;
-
+        
         custom_forward_list<int> list;        
 
         for (auto i = 0; i < 10; ++i)            
